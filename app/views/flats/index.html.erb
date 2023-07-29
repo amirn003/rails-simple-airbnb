@@ -1,14 +1,19 @@
 <div class="container">
-  <h1>Flats</h1>
+  <h1> All our flats (<%= @flats.length %>)</h1>
   <%# <div class= "d-flex align-content-start flex-wrap"> %>
   <div class="flex-container">
     <% @flats.each do |flat| %>
         <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to flat.name, flat_path(flat) %></h2>
-          <p><%= flat.description %></p>
+          <div class="flat-content">
+              <h2><%= link_to flat.name, flat_path(flat) %></h2>
+              <p><%= flat.description %></p>
+              <p class="flat-number-infos"><i class="fa-solid fa-users"></i>    <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></p>
+          </div>
+          <div class="flat-card-actions">
+            <p><%= link_to "More info", flat_path(flat) %></p>
+          </div>
         </div>
-      </div>
+
     <% end  %>
   </div>
   <%# </div> %>

@@ -90,6 +90,21 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.flat-content {
+  position: relative;
+  padding: 24px;
+  height: 80%;
+  background-color: #F8F9FA;
+}
+
+.flat-card-actions {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
+
+.flat-number-infos {
+  position: absolute;
+  bottom: 15px;
 }
