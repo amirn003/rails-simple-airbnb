@@ -1,0 +1,15 @@
+<h1>Flats</h1>
+
+<div class= "d-flex align-content-start flex-wrap">
+
+  <% @flats.each do |flat| %>
+      <div class="card-product">
+      <div class="card-product-infos">
+        <h2><%= flat.name %></h2>
+        <p><%= flat.description %></p>
+      </div>
+    </div>
+  <% end  %>
+
+
+</div>
