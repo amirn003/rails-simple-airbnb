@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run:
 
-Things you may want to cover:
+```
+rails server
+```
 
-* Ruby version
+Create a Model:
+```
+rails g model Flat name address description:text price_per_night:integer number_of_guests:integer
+```
 
-* System dependencies
+Create a new controller:
+```
+rails generate controller Flats
+```
 
-* Configuration
+Run migration:
+```
+rails db:migrate
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+View the routes of the app:
+```
+rails routes
+```
