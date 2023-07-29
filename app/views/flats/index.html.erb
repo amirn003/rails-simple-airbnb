@@ -10,7 +10,15 @@
               <p class="flat-number-infos"><i class="fa-solid fa-users"></i>    <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></p>
           </div>
           <div class="flat-card-actions">
-            <p><%= link_to "More info", flat_path(flat) %></p>
+            <p>
+              <%= link_to "More info", flat_path(flat) %>
+              <%= link_to "Edit", edit_flat_path(flat) %>
+              <%= link_to "Delete",
+                flat_path(flat),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+              %>
+
+            </p>
           </div>
         </div>
 
