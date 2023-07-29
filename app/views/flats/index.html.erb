@@ -1,6 +1,5 @@
 <div class="container">
   <h1> All our flats (<%= @flats.length %>)</h1>
-  <%# <div class= "d-flex align-content-start flex-wrap"> %>
   <div class="flex-container">
     <% @flats.each do |flat| %>
         <div class="card-product">
@@ -12,17 +11,16 @@
           <div class="flat-card-actions">
             <p>
               <%= link_to "More info", flat_path(flat) %>
-              <%= link_to "Edit", edit_flat_path(flat) %>
+              <%= link_to "Edit", edit_flat_path(flat), class: "ms-3 text-warning" %>
               <%= link_to "Delete",
                 flat_path(flat),
-                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                class: "ms-3 text-danger"
               %>
-
             </p>
           </div>
         </div>
 
     <% end  %>
   </div>
-  <%# </div> %>
 </div>
