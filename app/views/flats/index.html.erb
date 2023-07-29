@@ -1,15 +1,15 @@
-<h1>Flats</h1>
-
-<div class= "d-flex align-content-start flex-wrap">
-
-  <% @flats.each do |flat| %>
-      <div class="card-product">
-      <div class="card-product-infos">
-        <h2><%= flat.name %></h2>
-        <p><%= flat.description %></p>
+<div class="container">
+  <h1>Flats</h1>
+  <%# <div class= "d-flex align-content-start flex-wrap"> %>
+  <div class="flex-container">
+    <% @flats.each do |flat| %>
+        <div class="card-product">
+        <div class="card-product-infos">
+          <h2><%= link_to flat.name, flat_path(flat) %></h2>
+          <p><%= flat.description %></p>
+        </div>
       </div>
-    </div>
-  <% end  %>
-
-
+    <% end  %>
+  </div>
+  <%# </div> %>
 </div>
