@@ -1,16 +1,71 @@
-<div class="container">
-  <h1>Show: <%= @flat.name %></h1>
-
-
-  <div class="card-trip">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= @flat.name %></h2>
-        <p><%= @flat.description %> - <%= @flat.address %></p>
+<%# <img src='https://loremflickr.com/320/240/apartment,airbnb' alt='random-image' width='100%' height='450px'> %>
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')" ></div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
       </div>
-      <h2 class="card-trip-pricing">$ <%= @flat.price_per_night %> - <%= @flat.number_of_guests %> guests</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+        <div class="map" style="background-image: url('https://loremflickr.com/320/240/map,paris/all')"></div>
+      </div>
     </div>
+
+    <div class="col-4">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">From:</span>
+            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+             <%= @flat.number_of_guests %> <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="flex ms-2">
+            <%= @flat.price_per_night %> <i class="fa-solid fa-euro-sign"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flat-show-card">
+        <div class="flex-align">
+          <h6 class="no-mb">Share</h6>
+
+          <div class="flex">
+            <i class="fa-brands fa-facebook-square me-2 fa-2x"></i>
+            <i class="fa-brands fa-twitter-square me-2 fa-2x"></i>
+            <i class="fa-brands fa-pinterest-square me-2 fa-2x"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
   </div>
+
+
+
+
+
 </div>

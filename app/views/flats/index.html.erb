@@ -5,6 +5,7 @@
         <div class="card-product">
           <div class="flat-content">
               <h2><%= link_to flat.name, flat_path(flat) %></h2>
+              <p><%= flat.address %></p>
               <p><%= flat.description %></p>
               <p class="flat-number-infos"><i class="fa-solid fa-users"></i>    <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></p>
           </div>
